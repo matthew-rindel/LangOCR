@@ -1,5 +1,5 @@
 #include <iostream>
-#include <screen_overlay.h>
+#include "screen_overlay.h"
 #include "langocr_app.h"
 #include <QtWidgets/QRubberBand>
 #include <QtGui/QMouseEvent>

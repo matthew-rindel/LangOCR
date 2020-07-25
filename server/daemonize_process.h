@@ -1,6 +1,11 @@
 #ifndef _SERVER_DAEMONIZE_PROCESS_H_
 #define _SERVER_DAEMONIZE_PROCESS_H_
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 // MakeProcessIntoDaemon
 //
 // Turn the current process into a Daemon process.
@@ -10,4 +15,9 @@
 // process terminates.
 void MakeProcessIntoDaemon(void);
 
+#ifdef __cplusplus
+}
+#endif
+
 #endif 
+
