@@ -53,35 +53,21 @@ As a first step, add the bincrafters remote for Conan:
 
 To install packages via Conan, use:
 * ``conan install . --build=missing``
-* If you have issues with linking to openjpeg on Linux, use:
+* If you have issues with linking to openjpeg on Linux Mint/Ubuntu, use:
     * ``conan install . --build=openjpeg``
 * If there are still issues, check out this document on build policies: https://docs.conan.io/en/latest/mastering/policies.html
+    * This is also an option that can be tried: ``conan profile update settings.compiler.libcxx=libstdc++11 default``
     * The nuclear approach to build all dependencies from source is ``conan install . --build``
 
 To compile and link the project, use:
 
 ``conan build .``
 
-Until I have time to test on multiple platforms, I'm going to have to
-assume that developers interested on contributing can figure out the
-nitty-gritty of getting the packages they need. The following packages
-are installed on my system.
-
-* g++ (Arch Linux 9.3.0-1) 9.3.0
-* GNU Make 4.3
-* QMake version 3.1
-* Qt version 5.14.2
-* tesseract 4.1.1
-* leptonica-1.79.0
-
 ## Coding Style
 Please follow [Google C++ Coding
-Style](https://google.github.io/styleguide/cppguide.html). All PRs
-should adhere to Google coding style.
+Style](https://google.github.io/styleguide/cppguide.html).
 
-There is an emphasis on readability and modularity. As the project
-develops, it is realistic that major aspects of the code base will be
-interchanged.
+Coding style emphasizes readability and modularity over performance.
 
 ## Contact
 You can contact me through my twitter, by github, or by email. Email
